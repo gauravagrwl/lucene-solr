@@ -902,9 +902,9 @@ public class ZkStateReader implements SolrCloseable, Replica.NodeNameToBaseUrl {
       }
     }
 
-    if (notifications != null) {
-      notifications.shutdown();
-    }
+//    if (notifications != null) {
+//      notifications.shutdown();
+//    }
 
     stateWatchersMap.forEach((s, stateWatcher) -> IOUtils.closeQuietly(stateWatcher));
     stateWatchersMap.clear();
