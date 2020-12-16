@@ -920,12 +920,12 @@ public class ZkStateReader implements SolrCloseable, Replica.NodeNameToBaseUrl {
       } catch (NullPointerException e) {
         // okay
       }
-      if (notifications != null) {
-        notifications.shutdownNow();
-      }
+//      if (notifications != null) {
+//        notifications.shutdownNow();
+//      }
 
-      waitLatches.forEach(c -> { for (int i = 0; i < c.getCount(); i++) c.countDown(); });
-      waitLatches.clear();
+//      waitLatches.forEach(c -> { for (int i = 0; i < c.getCount(); i++) c.countDown(); });
+//      waitLatches.clear();
 
     } finally {
       assert ObjectReleaseTracker.release(this);
